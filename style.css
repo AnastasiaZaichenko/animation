@@ -1,0 +1,73 @@
+h1 {
+
+    animation-duration: 10s;
+    animation-name: title;
+}
+
+@keyframes title {
+    0% {
+        margin-left: 100%;
+        width: 300%;
+    
+    }
+
+    100% {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+
+p {
+
+    animation-duration: 10s;
+    animation-name: text;
+}
+
+@keyframes text {
+    0% {
+        margin-right: 100%;
+        width: 300%;
+    }
+
+    50% {
+        font-size: 300%;
+        margin-right: 25%;
+        width: 150%;
+        color: aquamarine;
+
+    }
+
+    100% {
+        margin-right: 0%;
+        width: 100%;
+    }
+}
+
+form {
+
+    animation-duration: 10s;
+    animation-name: form;
+}
+
+@keyframes form {
+    0% {
+        margin-left: 50%;
+        width: 300%;
+    
+    }
+
+    50% {
+        margin-left: 30%;
+        width: 300%;
+    }
+
+    50% {
+        margin-left: 80%;
+        width: 300%;
+    }
+
+    100% {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
