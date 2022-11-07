@@ -1,3 +1,11 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 h1 {
 
     animation-duration: 10s;
@@ -8,7 +16,6 @@ h1 {
     0% {
         margin-left: 100%;
         width: 300%;
-    
     }
 
     100% {
@@ -18,7 +25,6 @@ h1 {
 }
 
 p {
-
     animation-duration: 10s;
     animation-name: text;
 }
@@ -34,7 +40,6 @@ p {
         margin-right: 25%;
         width: 150%;
         color: aquamarine;
-
     }
 
     100% {
@@ -43,13 +48,11 @@ p {
     }
 }
 
-form {
-
+.mail {
     animation-duration: 10s;
     animation-name: form;
     animation-iteration-count: 3;
     animation-direction: alternate;
-
 }
 
 @keyframes form {
@@ -69,3 +72,98 @@ form {
         width: 100%;
     }
 }
+
+.field {
+    display: flex;
+    gap: 1em;
+    max-width: 600px;
+    align-items: center;
+    font-weight: 700;
+}
+
+.mail-prescription {
+    color: blue;
+}
+
+.input-group {
+    position: relative;
+}
+
+.mail-box {
+    font-size: 1rem;
+    padding: 0.75em 1em;
+    border-radius: 1em;
+    border: 2px solid aqua;
+    padding-left: 2.5em;
+}
+
+.mail-box::placeholder {
+    color: blue;
+}
+
+.mail-box:focus {
+    outline: 2px solid blue;
+    border: blue;
+    box-shadow: 0 0 20px blue;
+}
+
+.mail-box:-webkit-autofill {
+    -webkit-text-fill-color: blue;
+}
+
+span {
+    background-image: url(./pages/envelope-solid.svg);
+    background-repeat: no-repeat;
+    background-size: 1em;
+    background-position: 50%;
+    opacity: 50%;
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 1.5em;
+    left: 1em;
+    color:blue;
+}
+
+.custom-checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.custom-checkbox + label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+}
+
+.custom-checkbox + label::before {
+    content: "";
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    border: 2px solid black;
+    border-radius: 0.25em;
+    margin-right: 0.5em;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.custom-checkbox:checked + label::before {
+    background-image: url(./pages/check-solid.svg);
+}
+
+.custom-checkbox:not(:disabled):not(:checked) + label:hover::before {
+    border-color:blue;
+}
+
+.custom-checkbox:not(:disabled):active + label:hover::before {
+    border-color:blue;
+}
+
+.custom-checkbox:focus:not(:checked) + label::before {
+    border-color: blue;
+}
+
+
